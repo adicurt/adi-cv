@@ -4,219 +4,218 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Adi Čurt — Key Account Manager</title>
-  <meta name="description" content="Adi Čurt — Key Account Manager in Sarajevo. Client relationships, sales, service coordination, escalations, and process improvement." />
+  <meta name="description" content="Key Account Manager with expertise in client relationships, sales, service coordination, and operations." />
 
   <style>
     :root{
-      --bg0:#070A12;
-      --bg1:#0B1020;
-      --card:rgba(255,255,255,.06);
-      --card2:rgba(255,255,255,.09);
-      --line:rgba(255,255,255,.12);
-      --text:#EAF0FF;
-      --muted:rgba(234,240,255,.72);
-      --muted2:rgba(234,240,255,.55);
-      --accent:#7C5CFF;
-      --accent2:#2EE8B6;
-      --shadow: 0 20px 60px rgba(0,0,0,.35);
-      --radius:16px;
-      --max:1040px;
+      --bg:#0A0E1A;
+      --card:rgba(255,255,255,.05);
+      --line:rgba(255,255,255,.1);
+      --text:#E8EDF9;
+      --muted:rgba(232,237,249,.65);
+      --accent:#6B9FFF;
+      --shadow: 0 16px 48px rgba(0,0,0,.3);
     }
 
     @media (prefers-color-scheme: light){
       :root{
-        --bg0:#F6F7FB;
-        --bg1:#EEF1FF;
-        --card:rgba(255,255,255,.75);
-        --card2:rgba(255,255,255,.92);
-        --line:rgba(11,16,32,.10);
-        --text:#0B1020;
-        --muted:rgba(11,16,32,.72);
-        --muted2:rgba(11,16,32,.55);
-        --accent:#4B3CFF;
-        --accent2:#00B894;
-        --shadow: 0 18px 46px rgba(22,25,45,.12);
+        --bg:#F4F6FB;
+        --card:#FFFFFF;
+        --line:rgba(10,14,26,.12);
+        --text:#0A0E1A;
+        --muted:rgba(10,14,26,.6);
+        --accent:#3B7FFF;
+        --shadow: 0 12px 36px rgba(22,28,45,.08);
       }
     }
 
-    *{ box-sizing:border-box; }
+    *{ box-sizing:border-box; margin:0; padding:0; }
     html,body{ height:100%; }
     body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, system-ui, sans-serif;
       color:var(--text);
-      background:
-        radial-gradient(1200px 800px at 15% 0%, rgba(124,92,255,.35), transparent 55%),
-        radial-gradient(900px 700px at 85% 10%, rgba(46,232,182,.22), transparent 60%),
-        linear-gradient(180deg, var(--bg0), var(--bg1));
+      background: linear-gradient(165deg, var(--bg) 0%, #0D1220 100%);
+      line-height:1.5;
     }
 
-    a{ color:inherit; text-decoration:none; }
-    a:hover{ text-decoration:underline; text-underline-offset: 3px; }
+    a{ color:var(--accent); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
 
-    .wrap{ max-width:var(--max); margin:0 auto; padding:28px 18px 80px; }
+    .wrap{ max-width:900px; margin:0 auto; padding:32px 20px 60px; }
 
     .topbar{
       position:sticky; top:12px; z-index:10;
-      margin: 0 auto 18px;
-      padding: 10px 12px;
-      background: color-mix(in oklab, var(--card2) 92%, transparent);
+      margin-bottom:20px;
+      padding:10px 14px;
+      background: color-mix(in srgb, var(--card) 90%, transparent);
       border:1px solid var(--line);
-      border-radius: 999px;
-      backdrop-filter: blur(10px);
-      box-shadow: var(--shadow);
-      display:flex; gap:10px; align-items:center; justify-content:space-between;
+      border-radius:999px;
+      backdrop-filter:blur(12px);
+      box-shadow:var(--shadow);
+      display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap;
     }
-    .topbar .left{ display:flex; gap:10px; align-items:center; min-width: 0; }
+    .topbar .left{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
     .pill{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:8px 10px;
+      display:inline-flex; gap:6px; align-items:center;
+      padding:6px 10px;
       border-radius:999px;
       border:1px solid var(--line);
-      background: rgba(255,255,255,.02);
+      background:rgba(255,255,255,.02);
       color:var(--muted);
       font-size:13px;
       white-space:nowrap;
     }
     .pill strong{ color:var(--text); font-weight:600; }
-    .topbar .right{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .topbar .right{ display:flex; gap:8px; flex-wrap:wrap; }
     .btn{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:10px 12px;
-      border-radius: 999px;
+      display:inline-flex; align-items:center; gap:6px;
+      padding:8px 12px;
+      border-radius:999px;
       border:1px solid var(--line);
-      background: rgba(255,255,255,.02);
+      background:rgba(255,255,255,.02);
       color:var(--text);
-      font-size:14px;
+      font-size:13px;
+      cursor:pointer;
     }
     .btn.primary{
-      border-color: transparent;
-      background: linear-gradient(135deg, var(--accent), color-mix(in oklab, var(--accent) 30%, var(--accent2)));
+      border-color:transparent;
+      background:var(--accent);
       color:white;
-      box-shadow: 0 12px 26px rgba(124,92,255,.22);
+      box-shadow:0 8px 20px rgba(107,159,255,.25);
     }
 
     header{
-      padding: 22px 18px 18px;
+      padding:24px;
       border:1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--card);
-      box-shadow: var(--shadow);
-    }
-    h1{
-      margin:0;
-      font-size: 40px;
-      letter-spacing: -0.8px;
-      line-height:1.05;
-    }
-    .headline{
-      margin-top:10px;
+      border-radius:16px;
+      background:var(--card);
+      box-shadow:var(--shadow);
       display:flex;
-      gap:10px;
-      flex-wrap:wrap;
+      gap:20px;
       align-items:center;
-      color:var(--muted);
-      font-size:15px;
     }
-    .headline .dot{ opacity:.45; }
-    .sub{
-      margin:14px 0 0;
+    .photo{
+      flex-shrink:0;
+      width:100px;
+      height:100px;
+      border-radius:50%;
+      border:3px solid var(--line);
+      overflow:hidden;
+      background:rgba(255,255,255,.05);
+    }
+    .photo img{ width:100%; height:100%; object-fit:cover; }
+    .htext{ flex:1; }
+    h1{
+      margin:0 0 6px 0;
+      font-size:28px;
+      letter-spacing:-0.5px;
+      line-height:1.1;
+    }
+    .role{
       color:var(--muted);
-      line-height:1.55;
-      max-width: 78ch;
-      font-size: 15.5px;
+      font-size:14px;
+      margin-bottom:10px;
+    }
+    .meta{
+      display:flex; gap:10px; flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .meta span{ white-space:nowrap; }
+
+    @media (max-width:680px){
+      header{ flex-direction:column; text-align:center; }
+      .meta{ justify-content:center; }
     }
 
     .grid{
       margin-top:16px;
       display:grid;
-      grid-template-columns: 1.15fr .85fr;
+      grid-template-columns:1.2fr .8fr;
       gap:16px;
     }
-    @media (max-width: 920px){
-      h1{ font-size: 34px; }
-      .grid{ grid-template-columns: 1fr; }
-      .topbar{ top:10px; }
-    }
+    @media (max-width:820px){ .grid{ grid-template-columns:1fr; } }
 
     section{
       border:1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--card);
-      box-shadow: var(--shadow);
-      padding: 16px;
+      border-radius:14px;
+      background:var(--card);
+      box-shadow:var(--shadow);
+      padding:18px;
     }
     h2{
-      margin:0 0 10px 0;
-      font-size: 16px;
+      margin:0 0 12px 0;
+      font-size:16px;
       letter-spacing:.2px;
     }
 
-    .tags{ display:flex; gap:8px; flex-wrap:wrap; }
-    .tag{
-      font-size:12.5px;
-      color:var(--muted);
-      border:1px solid var(--line);
-      padding:7px 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.02);
-    }
-
-    .xp .role{
-      padding: 14px 0;
+    .job{
+      padding:12px 0;
       border-top:1px solid var(--line);
     }
-    .xp .role:first-child{ border-top:none; padding-top:0; }
-    .rtitle{
+    .job:first-child{ border-top:none; padding-top:0; }
+    .jtitle{
       display:flex; align-items:baseline; justify-content:space-between; gap:10px; flex-wrap:wrap;
     }
-    .rtitle h3{
+    .jtitle h3{
       margin:0;
-      font-size: 15.5px;
+      font-size:15px;
     }
     .when{
-      color:var(--muted2);
-      font-size: 13px;
+      color:var(--muted);
+      font-size:12px;
       white-space:nowrap;
     }
     .where{
-      margin:6px 0 0;
+      margin:4px 0 8px;
       color:var(--muted);
-      font-size: 13.5px;
+      font-size:13px;
     }
     ul{
-      margin:10px 0 0 18px;
+      margin:0 0 0 18px;
       padding:0;
-      color: var(--text);
     }
-    li{ margin: 7px 0; color: var(--text); }
-    li span.m{ color: var(--muted); }
+    li{
+      margin:5px 0;
+      font-size:14px;
+      color:var(--text);
+    }
+    li .hl{ color:var(--accent); font-weight:600; }
 
-    .split{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
+    .tags{ display:flex; gap:6px; flex-wrap:wrap; }
+    .tag{
+      font-size:12px;
+      color:var(--muted);
+      border:1px solid var(--line);
+      padding:6px 9px;
+      border-radius:999px;
+      background:rgba(255,255,255,.02);
     }
 
     .small{
       color:var(--muted);
-      font-size: 13.5px;
+      font-size:13px;
       line-height:1.5;
+      margin-bottom:8px;
     }
 
     footer{
-      margin-top: 14px;
-      color: var(--muted2);
+      margin-top:16px;
+      color:var(--muted);
       text-align:center;
-      font-size: 12.5px;
+      font-size:12px;
     }
 
-    /* Print */
+    /* Print styles */
     @media print{
-      .topbar{ display:none; }
       body{ background:#fff; color:#000; }
-      header, section{ box-shadow:none; background:#fff; border:1px solid #ddd; }
+      .topbar{ display:none; }
+      header, section{ box-shadow:none; background:#fff; border:1px solid #ddd; page-break-inside:avoid; }
       a{ text-decoration:none; color:#000; }
+      .meta a{ color:#555; }
+      h1{ font-size:24px; }
+      .role{ font-size:13px; }
+      .photo{ border-color:#ccc; }
     }
   </style>
 </head>
@@ -226,110 +225,135 @@
 
     <div class="topbar">
       <div class="left">
-        <div class="pill"><strong>Adi Čurt</strong> <span>• Key Account Manager</span></div>
-        <div class="pill">Sarajevo • BiH</div>
+        <div class="pill"><strong>Adi Čurt</strong></div>
+        <div class="pill">Key Account Manager</div>
+        <div class="pill">Sarajevo, BiH</div>
       </div>
       <div class="right">
-        <a class="btn" href="mailto:adi_curt@hotmail.com">adi_curt@hotmail.com</a>
+        <a class="btn" href="mailto:adi_curt@hotmail.com">Email</a>
         <a class="btn" href="tel:+38761784430">+387 61 784 430</a>
         <a class="btn" href="https://www.linkedin.com/in/adi-curt/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="btn primary" href="#" onclick="window.print();return false;">Print / Save PDF</a>
+        <a class="btn primary" href="#" onclick="window.print();return false;">Save as PDF</a>
       </div>
     </div>
 
     <header>
-      <h1>Key Account Manager</h1>
-      <div class="headline">
-        <span>Client relationships</span><span class="dot">•</span>
-        <span>Sales & onboarding</span><span class="dot">•</span>
-        <span>Service coordination & escalations</span><span class="dot">•</span>
-        <span>Process automation</span>
+      <div class="photo">
+        <img src="https://media.licdn.com/dms/image/v2/D4E03AQGyT3MJhGbSTg/profile-displayphoto-shrink_200_200/B4EZZSROHIH0AY-/0/1745136970083?e=2147483647&v=beta&t=EeV4RbSpzoj8i8C-iv-UyBPYSThLOYp8Qmamxi146g4" alt="Adi Čurt" />
       </div>
-      <p class="sub">
-        Key Account Manager and client-operations professional with strong account ownership, field execution, and stakeholder management.
-        I bring ~2.5 years in customer support & escalations (including ~1 year in Zendesk omnichannel), plus ~3 years in sales/client relationship roles.
-        Known for consistently meeting targets, leading operations improvements (knowledge base, communication templates, automation), and building strong relationships in the local tech/retail ecosystem—relevant for working with the same decision-makers and sales locations in consumer electronics.
-      </p>
+      <div class="htext">
+        <h1>Adi Čurt</h1>
+        <div class="role">Key Account Manager — Client Relationships, Sales & Service Coordination</div>
+        <div class="meta">
+          <span>Sarajevo, BiH</span>
+          <span>•</span>
+          <a href="mailto:adi_curt@hotmail.com">adi_curt@hotmail.com</a>
+          <span>•</span>
+          <a href="tel:+38761784430">+387 61 784 430</a>
+          <span>•</span>
+          <a href="https://www.linkedin.com/in/adi-curt/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
     </header>
 
     <div class="grid">
       <div>
-        <section class="xp">
+        <section>
           <h2>Experience</h2>
 
-          <div class="role">
-            <div class="rtitle">
-              <h3>Key Account Manager — Ushop Tax Free</h3>
-              <div class="when">2025 – Present</div>
+          <div class="job">
+            <div class="jtitle">
+              <h3>Key Account Manager — Ushop Tax Free Adria</h3>
+              <div class="when">Aug 2025 – Present</div>
             </div>
-            <div class="where">Sarajevo • VAT refund solution for foreign shoppers</div>
+            <div class="where">Sarajevo • Hybrid</div>
             <ul>
-              <li>Onboarded <b>11 retail clients</b> in the first 6 months through structured onboarding, trainings, and field execution.</li>
-              <li>Visited sales locations and delivered in-person education to both management and frontline teams to drive adoption and consistency.</li>
-              <li>Built strong professional relationships across the local tech/retail ecosystem; already in active communication with stakeholders connected to consumer electronics sales channels.</li>
-              <li>Aligned commercial terms and operational workflows with company directors and internal accounting teams.</li>
+              <li>Onboarded <span class="hl">11 retail clients</span> in first 6 months through structured onboarding and field trainings.</li>
+              <li>Built relationships with management and frontline teams at sales locations across the local tech/retail ecosystem.</li>
+              <li><span class="hl">Already know key stakeholders</span> and decision-makers in consumer electronics retail channels — relevant for Samsung Adriatic role.</li>
             </ul>
           </div>
 
-          <div class="role">
-            <div class="rtitle">
-              <h3>DesignRush — Sales / Client Relationship (progression)</h3>
-              <div class="when">2021 – 2025</div>
+          <div class="job">
+            <div class="jtitle">
+              <h3>Agency Reputation Specialist — DesignRush</h3>
+              <div class="when">Jul 2023 – Sep 2025</div>
             </div>
-            <div class="where">Client relationship & growth initiatives</div>
+            <div class="where">Miami, FL (Remote)</div>
             <ul>
-              <li>Moved from support operations into sales/client relationship work, identifying growth opportunities and driving marketplace initiatives with clients.</li>
-              <li>Led targeted LinkedIn and email campaigns; improved internal processes to enhance execution speed and client engagement.</li>
+              <li>Main point of contact for incoming reviews; ensured fast issue resolution and clear communication.</li>
+              <li>Led LinkedIn/email campaigns and streamlined internal processes for faster execution.</li>
+              <li>Designed and implemented Bayesian average rating system to improve credibility of reputation metrics.</li>
             </ul>
           </div>
 
-          <div class="role">
-            <div class="rtitle">
-              <h3>DesignRush — Support Ops & Escalations (tools varied)</h3>
-              <div class="when">~2.5 years total support (combined)</div>
+          <div class="job">
+            <div class="jtitle">
+              <h3>Client Relationship Manager — DesignRush</h3>
+              <div class="when">Jul 2022 – Jun 2023</div>
             </div>
-            <div class="where">Escalations ownership • Operations leadership • Process improvement</div>
+            <div class="where">Miami, FL (Remote)</div>
             <ul>
-              <li>Owned complex escalations and ensured timely resolution through clear communication and cross-functional coordination.</li>
-              <li>Led an operations team: assigned responsibilities based on strengths, improved consistency, and ensured targets were met.</li>
-              <li>Improved knowledge base and SOPs; simplified Excel tracking/reporting; upgraded customer email templates to reduce friction and speed up resolution.</li>
-              <li>Built internal software to automate repetitive operational processes and reduce manual workload.</li>
-              <li>Designed and implemented a Bayesian average rating approach to correct inflated review scores and improve credibility of reputation metrics.</li>
+              <li>Owned client relationships and post-sales support; handled objections and delivered solutions.</li>
+              <li>Drove sales initiatives and marketplace growth through structured follow-up and stakeholder alignment.</li>
             </ul>
           </div>
 
-          <div class="role">
-            <div class="rtitle">
-              <h3>Customer Support (Zendesk) — HelloFresh / Glovo / Helpling</h3>
-              <div class="when">~1 year</div>
+          <div class="job">
+            <div class="jtitle">
+              <h3>Agency Support Representative — DesignRush</h3>
+              <div class="when">Dec 2021 – Jul 2022</div>
             </div>
-            <div class="where">Zendesk omnichannel: chat • email • phone</div>
+            <div class="where">Florida, USA</div>
             <ul>
-              <li>Handled high workload in Zendesk across channels; resolved 20+ tickets daily alongside calls and multiple concurrent chats, often high-priority cases.</li>
-              <li>Consistently met targets and ranked among top performers; supported onboarding/training of new colleagues.</li>
+              <li>Owned escalations and led operations improvements: simplified tracking, upgraded email templates, built automation.</li>
+              <li>Led operations team by aligning people with strengths and ensuring consistent execution.</li>
             </ul>
           </div>
 
-          <div class="role">
-            <div class="rtitle">
-              <h3>Costa Cruises / Steiner — Fitness Coach & Sales Specialist</h3>
-              <div class="when">2017 – 2018</div>
+          <div class="job">
+            <div class="jtitle">
+              <h3>Customer Care Professional — Mplus</h3>
+              <div class="when">Nov 2019 – Sep 2020</div>
             </div>
-            <div class="where">Sales seminars • Customer engagement • Upselling</div>
+            <div class="where">Sarajevo (Helpling / Glovo / HelloFresh projects)</div>
             <ul>
-              <li>Delivered sales seminars and customer engagement in a fast-paced environment, strengthening persuasive communication and upselling skills.</li>
+              <li>High-volume omnichannel support (Zendesk): handled 20+ tickets daily alongside calls and multiple concurrent chats.</li>
+              <li>Consistently met SLA/KPI targets and ranked among top performers.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <div class="jtitle">
+              <h3>Functional Trainer — PFHSC</h3>
+              <div class="when">Mar 2019 – Sep 2019</div>
+            </div>
+            <div class="where">Sarajevo</div>
+            <ul>
+              <li>Coached high-performance athletes and post-op clients; tailored programs and led group trainings.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <div class="jtitle">
+              <h3>Fitness Instructor — Steiner (Costa Cruises)</h3>
+              <div class="when">Dec 2017 – Jul 2018</div>
+            </div>
+            <div class="where">Cruise Ship</div>
+            <ul>
+              <li>Delivered large-scale seminars and onboard sales; strengthened communication and upselling skills.</li>
             </ul>
           </div>
 
         </section>
       </div>
 
-      <div class="split">
+      <div>
         <section>
-          <h2>Strengths for Samsung Adriatic</h2>
+          <h2>Key Strengths</h2>
           <p class="small">
-            Key Account focus first: relationship ownership, negotiations, onboarding, field execution, and structured follow-up.
-            Strong “service layer” advantage: escalations, stakeholder alignment, SLA/KPI mindset, and process improvements that make support faster and more consistent.
+            <strong>Account ownership first:</strong> relationship building, negotiations, onboarding, field execution.<br>
+            <strong>Service coordination advantage:</strong> escalations, SLA/KPI mindset, process improvements, cross-functional alignment.
           </p>
           <div class="tags">
             <span class="tag">Key Account Management</span>
@@ -337,43 +361,36 @@
             <span class="tag">Sales & onboarding</span>
             <span class="tag">Service coordination</span>
             <span class="tag">Escalations</span>
-            <span class="tag">SLA/KPI mindset</span>
+            <span class="tag">SLA/KPI ownership</span>
             <span class="tag">Process automation</span>
             <span class="tag">Training</span>
-            <span class="tag">Negotiation</span>
-          </div>
-        </section>
-
-        <section>
-          <h2>Skills</h2>
-          <div class="tags">
-            <span class="tag">Client relationships</span>
-            <span class="tag">Account planning</span>
-            <span class="tag">Cross-functional projects</span>
-            <span class="tag">Customer experience</span>
-            <span class="tag">Knowledge base / SOPs</span>
-            <span class="tag">Excel reporting</span>
-            <span class="tag">Email & LinkedIn campaigns</span>
-            <span class="tag">Critical thinking</span>
-            <span class="tag">Leadership</span>
           </div>
         </section>
 
         <section>
           <h2>Education</h2>
-          <p class="small"><b>Electrical Engineer & Electro Mechanic</b> (High School Focus), 2012 – 2016</p>
-          <p class="small"><b>Steiner Academy London</b>, 2017 — Yoga, Pilates, TRX, Indoor Cycling, Nutrition; Seminar Hosting; Aggressive Sales Techniques</p>
+          <p class="small"><strong>Electrical Engineer & Electro Mechanic</strong> (High School Focus)<br>2012 – 2016</p>
+          <p class="small"><strong>Steiner Academy London</strong>, 2017<br>Yoga, Pilates, TRX, Indoor Cycling, Nutrition; Seminar Hosting; Aggressive Sales Techniques</p>
         </section>
 
         <section>
           <h2>Languages</h2>
           <p class="small">English (Fluent) • Bosnian/Serbian/Croatian (Native)</p>
         </section>
+
+        <section>
+          <h2>Contact</h2>
+          <p class="small">
+            <a href="mailto:adi_curt@hotmail.com">adi_curt@hotmail.com</a><br>
+            <a href="tel:+38761784430">+387 61 784 430</a><br>
+            <a href="https://www.linkedin.com/in/adi-curt/" target="_blank">linkedin.com/in/adi-curt</a>
+          </p>
+        </section>
       </div>
     </div>
 
     <footer>
-      Tip: This page is designed to be printed as a clean PDF (“Print / Save PDF”).
+      Click "Save as PDF" to export a clean, print-friendly version.
     </footer>
   </div>
 </body>
