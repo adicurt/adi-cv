@@ -85,19 +85,21 @@
     }
 
     header{
-      padding:24px;
+      padding:20px 24px;
       border:1px solid var(--line);
-      border-radius:16px;
+      border-radius:14px;
       background:var(--card);
       box-shadow:var(--shadow);
       display:flex;
-      gap:20px;
+      gap:18px;
       align-items:center;
+      margin-bottom:18px;
+      page-break-inside: avoid;
     }
     .photo{
       flex-shrink:0;
-      width:100px;
-      height:100px;
+      width:90px;
+      height:90px;
       border-radius:50%;
       border:3px solid var(--line);
       overflow:hidden;
@@ -106,20 +108,20 @@
     .photo img{ width:100%; height:100%; object-fit:cover; }
     .htext{ flex:1; }
     h1{
-      margin:0 0 6px 0;
-      font-size:28px;
+      margin:0 0 4px 0;
+      font-size:26px;
       letter-spacing:-0.5px;
       line-height:1.1;
     }
     .role{
       color:var(--muted);
-      font-size:14px;
-      margin-bottom:10px;
+      font-size:13px;
+      margin-bottom:8px;
     }
     .meta{
       display:flex; gap:10px; flex-wrap:wrap;
       color:var(--muted);
-      font-size:13px;
+      font-size:12px;
     }
     .meta span{ white-space:nowrap; }
 
@@ -129,28 +131,31 @@
     }
 
     .grid{
-      margin-top:16px;
       display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:16px;
+      grid-template-columns:1.3fr .7fr;
+      gap:18px;
     }
     @media (max-width:820px){ .grid{ grid-template-columns:1fr; } }
 
     section{
       border:1px solid var(--line);
-      border-radius:14px;
+      border-radius:12px;
       background:var(--card);
       box-shadow:var(--shadow);
-      padding:18px;
+      padding:16px;
+      margin-bottom:18px;
+      page-break-inside: avoid;
     }
     h2{
-      margin:0 0 12px 0;
-      font-size:16px;
+      margin:0 0 10px 0;
+      font-size:15px;
       letter-spacing:.2px;
+      border-bottom:1px solid var(--line);
+      padding-bottom:6px;
     }
 
     .job{
-      padding:12px 0;
+      padding:10px 0;
       border-top:1px solid var(--line);
     }
     .job:first-child{ border-top:none; padding-top:0; }
@@ -159,63 +164,167 @@
     }
     .jtitle h3{
       margin:0;
-      font-size:15px;
+      font-size:14px;
     }
     .when{
       color:var(--muted);
-      font-size:12px;
+      font-size:11px;
       white-space:nowrap;
     }
     .where{
-      margin:4px 0 8px;
+      margin:3px 0 6px;
       color:var(--muted);
-      font-size:13px;
+      font-size:12px;
     }
     ul{
       margin:0 0 0 18px;
       padding:0;
     }
     li{
-      margin:5px 0;
-      font-size:14px;
+      margin:4px 0;
+      font-size:13px;
       color:var(--text);
     }
     li .hl{ color:var(--accent); font-weight:600; }
 
-    .tags{ display:flex; gap:6px; flex-wrap:wrap; }
+    .tags{ display:flex; gap:6px; flex-wrap:wrap; margin-top:8px; }
     .tag{
-      font-size:12px;
+      font-size:11px;
       color:var(--muted);
       border:1px solid var(--line);
-      padding:6px 9px;
+      padding:5px 8px;
       border-radius:999px;
       background:rgba(255,255,255,.02);
     }
 
     .small{
       color:var(--muted);
-      font-size:13px;
+      font-size:12px;
       line-height:1.5;
-      margin-bottom:8px;
+      margin-bottom:6px;
     }
 
     footer{
-      margin-top:16px;
+      margin-top:14px;
       color:var(--muted);
       text-align:center;
-      font-size:12px;
+      font-size:11px;
     }
 
     /* Print styles */
     @media print{
-      body{ background:#fff; color:#000; }
-      .topbar{ display:none; }
-      header, section{ box-shadow:none; background:#fff; border:1px solid #ddd; page-break-inside:avoid; }
-      a{ text-decoration:none; color:#000; }
-      .meta a{ color:#555; }
-      h1{ font-size:24px; }
-      .role{ font-size:13px; }
-      .photo{ border-color:#ccc; }
+      @page{ margin:0.75in; size:letter; }
+      
+      body{ 
+        background:#fff !important; 
+        color:#000 !important; 
+        margin:0;
+        padding:0;
+      }
+      
+      .wrap{ 
+        max-width:100%;
+        padding:0;
+        margin:0;
+      }
+      
+      .topbar{ display:none !important; }
+      
+      header{ 
+        box-shadow:none !important; 
+        background:#fff !important; 
+        border:1px solid #ddd !important;
+        padding:16px !important;
+        margin-bottom:12px !important;
+        page-break-after:avoid !important;
+        page-break-inside:avoid !important;
+      }
+      
+      .photo{ border-color:#ccc !important; }
+      
+      h1{ 
+        font-size:22px !important; 
+        color:#000 !important;
+      }
+      
+      .role{ 
+        font-size:12px !important; 
+        color:#555 !important;
+      }
+      
+      .meta{ 
+        font-size:11px !important; 
+        color:#555 !important;
+      }
+      .meta a{ color:#000 !important; text-decoration:none !important; }
+      
+      .grid{ 
+        grid-template-columns:1.3fr .7fr !important;
+        gap:12px !important;
+      }
+      
+      section{ 
+        box-shadow:none !important; 
+        background:#fff !important; 
+        border:1px solid #ddd !important;
+        padding:12px !important;
+        margin-bottom:12px !important;
+        page-break-inside:avoid !important;
+      }
+      
+      h2{ 
+        font-size:14px !important; 
+        color:#000 !important;
+        border-bottom:1px solid #ccc !important;
+        padding-bottom:4px !important;
+      }
+      
+      .job{ 
+        padding:8px 0 !important;
+        border-top:1px solid #eee !important;
+        page-break-inside:avoid !important;
+      }
+      
+      .jtitle h3{ 
+        font-size:13px !important; 
+        color:#000 !important;
+      }
+      
+      .when{ 
+        font-size:10px !important; 
+        color:#666 !important;
+      }
+      
+      .where{ 
+        font-size:11px !important; 
+        color:#666 !important;
+      }
+      
+      li{ 
+        font-size:12px !important; 
+        color:#000 !important;
+        margin:3px 0 !important;
+      }
+      
+      .hl{ color:#0066cc !important; }
+      
+      .tag{ 
+        font-size:10px !important; 
+        color:#555 !important;
+        border-color:#ccc !important;
+      }
+      
+      .small{ 
+        font-size:11px !important; 
+        color:#555 !important;
+      }
+      
+      a{ 
+        text-decoration:none !important; 
+        color:#000 !important;
+      }
+      
+      footer{ display:none !important; }
     }
   </style>
 </head>
@@ -270,7 +379,7 @@
             <ul>
               <li>Onboarded <span class="hl">11 retail clients</span> in first 6 months through structured onboarding and field trainings.</li>
               <li>Built relationships with management and frontline teams at sales locations across the local tech/retail ecosystem.</li>
-              <li><span class="hl">Already know key stakeholders</span> and decision-makers in consumer electronics retail channels — relevant for Samsung Adriatic role.</li>
+              <li><span class="hl">Already know key stakeholders</span> and decision-makers in consumer electronics retail channels.</li>
             </ul>
           </div>
 
@@ -281,9 +390,9 @@
             </div>
             <div class="where">Miami, FL (Remote)</div>
             <ul>
-              <li>Main point of contact for incoming reviews; ensured fast issue resolution and clear communication.</li>
-              <li>Led LinkedIn/email campaigns and streamlined internal processes for faster execution.</li>
-              <li>Designed and implemented Bayesian average rating system to improve credibility of reputation metrics.</li>
+              <li>Main point of contact for reviews; ensured fast issue resolution and clear communication.</li>
+              <li>Led LinkedIn/email campaigns and streamlined internal processes.</li>
+              <li>Designed Bayesian average rating system to improve credibility metrics.</li>
             </ul>
           </div>
 
@@ -295,7 +404,7 @@
             <div class="where">Miami, FL (Remote)</div>
             <ul>
               <li>Owned client relationships and post-sales support; handled objections and delivered solutions.</li>
-              <li>Drove sales initiatives and marketplace growth through structured follow-up and stakeholder alignment.</li>
+              <li>Drove sales initiatives and marketplace growth through structured follow-up.</li>
             </ul>
           </div>
 
@@ -306,8 +415,8 @@
             </div>
             <div class="where">Florida, USA</div>
             <ul>
-              <li>Owned escalations and led operations improvements: simplified tracking, upgraded email templates, built automation.</li>
-              <li>Led operations team by aligning people with strengths and ensuring consistent execution.</li>
+              <li>Owned escalations and led operations improvements: simplified tracking, upgraded templates, built automation.</li>
+              <li>Led operations team by aligning people with strengths.</li>
             </ul>
           </div>
 
@@ -316,9 +425,9 @@
               <h3>Customer Care Professional — Mplus</h3>
               <div class="when">Nov 2019 – Sep 2020</div>
             </div>
-            <div class="where">Sarajevo (Helpling / Glovo / HelloFresh projects)</div>
+            <div class="where">Sarajevo (Helpling / Glovo / HelloFresh)</div>
             <ul>
-              <li>High-volume omnichannel support (Zendesk): handled 20+ tickets daily alongside calls and multiple concurrent chats.</li>
+              <li>Omnichannel support (Zendesk): handled 20+ tickets daily alongside calls and multiple chats.</li>
               <li>Consistently met SLA/KPI targets and ranked among top performers.</li>
             </ul>
           </div>
@@ -352,8 +461,10 @@
         <section>
           <h2>Key Strengths</h2>
           <p class="small">
-            <strong>Account ownership first:</strong> relationship building, negotiations, onboarding, field execution.<br>
-            <strong>Service coordination advantage:</strong> escalations, SLA/KPI mindset, process improvements, cross-functional alignment.
+            <strong>Account ownership:</strong> relationship building, negotiations, onboarding, field execution.
+          </p>
+          <p class="small">
+            <strong>Service coordination:</strong> escalations, SLA/KPI mindset, process improvements, cross-functional alignment.
           </p>
           <div class="tags">
             <span class="tag">Key Account Management</span>
@@ -369,13 +480,18 @@
 
         <section>
           <h2>Education</h2>
-          <p class="small"><strong>Electrical Engineer & Electro Mechanic</strong> (High School Focus)<br>2012 – 2016</p>
-          <p class="small"><strong>Steiner Academy London</strong>, 2017<br>Yoga, Pilates, TRX, Indoor Cycling, Nutrition; Seminar Hosting; Aggressive Sales Techniques</p>
+          <p class="small"><strong>Electrical Engineer & Electro Mechanic</strong> (High School)<br>2012 – 2016</p>
+          <p class="small"><strong>Steiner Academy London</strong>, 2017<br>Yoga, Pilates, TRX, Indoor Cycling, Nutrition, Seminar Hosting, Aggressive Sales Techniques</p>
         </section>
 
         <section>
           <h2>Languages</h2>
           <p class="small">English (Fluent) • Bosnian/Serbian/Croatian (Native)</p>
+        </section>
+
+        <section>
+          <h2>Additional Info</h2>
+          <p class="small"><strong>Driver's License:</strong> Category B</p>
         </section>
 
         <section>
